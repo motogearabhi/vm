@@ -1,4 +1,1 @@
-az logout
-az login --tenant kpmg.onmicrosoft.com
-az devops configure --defaults organization=https://co-azurecore.visualstudio.com project=KpmgAdvisoryCloud
-az repos list
+b
