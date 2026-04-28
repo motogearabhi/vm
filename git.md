@@ -11,7 +11,6 @@ git push origin refs/tags/*:refs/tags/* --force
 
 
 
-for branch in $(git branch -r | grep azure/ | grep -v HEAD | sed 's|azure/||'); do
-  git checkout -B "$branch" "azure/$branch"
-  git push origin "$branch"
-done
+
+
+git branch -r | grep azure/ | grep -v HEAD | while read branch; do b=${branch#azure/}; git checkout -B "$b" "$branch"; git push origin "$b"; done
